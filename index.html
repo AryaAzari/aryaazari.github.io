@@ -1,53 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jon Snow — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Portfolio</h1>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    </header>
+  <a href="#projects" class="visually-hidden">Skip to content</a>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p> Welcome! I'm a bit behind.</p>
-    </section>
+  <!-- NAV -->
+  <div class="nav">
+    <div class="container nav-inner">
+      <div class="brand">&lt;/&gt; <span>Jon Snow</span></div>
+      <nav class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <button id="themeToggle" aria-label="Toggle theme" class="toggle" title="Toggle theme"><span></span></button>
+      </nav>
+    </div>
+  </div>
 
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project">
-            <h3>Project 1: TBD skull emoji</h3>
-            <p>Wallah this project is coming soon</p>
-            <a href="#">View Project</a>
+  <!-- HERO -->
+  <header class="container hero">
+    <div>
+      <div class="eyebrow"><span class="dot" aria-hidden="true"></span><span>Project Portfolio</span></div>
+      <h1 class="title">Building thoughtful, data-driven experiences. <span class="grad">Shipping clean code</span> and crisp stories.</h1>
+      <p class="subtitle">I turn ambiguous problems into elegant, performant solutions — and explain the journey so anyone can follow. Here’s a curated set of projects, from product experiments to analytics pipelines.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#projects">View Projects</a>
+        <a class="btn btn-ghost" href="#contact">Get in Touch</a>
+      </div>
+      <div class="stack" style="margin-top:1.25rem">
+        <div class="metric" aria-live="polite">
+          <div class="chip">New</div>
+          <div>
+            <div><strong>2025</strong> Spotlight — Portfolio v3</div>
+            <div style="color:var(--muted);font-size:.92rem">Faster, smaller, and accessible by default.</div>
+          </div>
+          <a class="btn" href="#projects" aria-label="Jump to featured projects">→</a>
         </div>
-        <!-- Repeat that when have more projects type shit-->
-    </section>
+      </div>
+    </div>
+    <div class="preview" aria-hidden="true"></div>
+  </header>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form id="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Message" required></textarea>
-            <button type="submit">Send</button>
+  <!-- PROJECTS -->
+  <section id="projects" class="container">
+    <div class="section-head">
+      <h2>Featured Projects</h2>
+      <div class="chip">Hand-picked</div>
+    </div>
+    <div class="grid cols-3">
+      <article class="card reveal">
+        <div class="thumb" role="img" aria-label="Analytics dashboard preview"></div>
+        <div class="card-body">
+          <h3>InsightForge — Analytics Dashboard</h3>
+          <p>End-to-end analytics with a focus on fast queries, tidy UX, and narrative storytelling for stakeholders.</p>
+          <div class="tags">
+            <span class="chip">TypeScript</span><span class="chip">D3</span><span class="chip">Postgres</span>
+          </div>
+          <div class="cta" style="margin-top:.8rem">
+            <a class="btn" href="#">Case Study</a>
+            <a class="btn btn-primary" href="#">Live Demo</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="thumb"></div>
+        <div class="card-body">
+          <h3>Routewise — Parking Assistant</h3>
+          <p>City-scale parking availability, pricing, and rules fused into a calm interface for drivers.</p>
+          <div class="tags">
+            <span class="chip">React Native</span><span class="chip">Maps</span><span class="chip">API Design</span>
+          </div>
+          <div class="cta" style="margin-top:.8rem">
+            <a class="btn" href="#">Overview</a>
+            <a class="btn btn-primary" href="#">Prototype</a>
+          </div>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="thumb"></div>
+        <div class="card-body">
+          <h3>Sift — Review Sentiment Engine</h3>
+          <p>From messy text to business signals. Built a compact pipeline and evaluation harness for product teams.</p>
+          <div class="tags">
+            <span class="chip">Python</span><span class="chip">NLP</span><span class="chip">MLOps</span>
+          </div>
+          <div class="cta" style="margin-top:.8rem">
+            <a class="btn" href="#">Read More</a>
+            <a class="btn btn-primary" href="#">Repo</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="container">
+    <div class="section-head">
+      <h2>About</h2>
+      <div class="chip">Human + Systems</div>
+    </div>
+    <div class="about">
+      <div class="blurb reveal">
+        <h3>Hi, I’m Jon.</h3>
+        <p>I build things that make decisions easier and interfaces calmer. I enjoy pairing with design, product, and data to ship useful slices quickly.</p>
+      </div>
+      <div class="stack">
+        <div class="card reveal" style="padding:1rem">
+          <h3>Core Skills</h3>
+          <div class="tags"><span class="chip">Product Thinking</span><span class="chip">Data Viz</span><span class="chip">APIs</span><span class="chip">Performance</span><span class="chip">A11y</span></div>
+        </div>
+        <div class="card reveal" style="padding:1rem">
+          <h3>Toolbox</h3>
+          <div class="tags"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">React</span><span class="chip">Python</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="container">
+    <div class="section-head">
+      <h2>Contact</h2>
+      <div class="chip">Let’s build</div>
+    </div>
+    <div class="contact">
+      <div class="panel reveal">
+        <h3>Open to collaborations</h3>
+        <p style="color:var(--muted)">I’m especially interested in products at the intersection of data, UX, and education. If that’s you, let’s talk.</p>
+        <div class="cta" style="margin-top:1rem">
+          <a class="btn btn-primary" href="mailto:hello@example.com">Email Me</a>
+          <a class="btn" href="#">Resume</a>
+        </div>
+      </div>
+      <div class="panel reveal">
+        <form id="contactForm" novalidate>
+          <label><span>Name</span><input name="name" required placeholder="Your name" /></label>
+          <label><span>Email</span><input type="email" name="email" required placeholder="you@example.com" /></label>
+          <label><span>Message</span><textarea name="message" required placeholder="Hey Jon, I’d love to chat about…"></textarea></label>
+          <button class="btn btn-primary" type="submit">Send</button>
+          <p id="formMsg" style="display:none;color:var(--muted);margin-top:.6rem"></p>
         </form>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; Arya Azari Portfolio 2024</p>
-    </footer>
+  <footer class="container">
+    <div style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+      <small>© <span id="year"></span> Jon Snow. Built with semantic HTML, CSS, and JS.</small>
+      <div class="tags">
+        <span class="chip">Dark Mode</span><span class="chip">Responsive</span><span class="chip">Accessible</span><span class="chip">Fast</span>
+      </div>
+    </div>
+  </footer>
 
-    <script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
