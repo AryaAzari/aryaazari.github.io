@@ -96,18 +96,19 @@
 
 
   <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p class="lead">I’m always open to collaborations at the intersection of data, UX, and storytelling. Let’s connect.</p>
-    <div class="container" style="margin-top:2.2rem;max-width:600px">
-      <form>
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Your Email">
-        <textarea placeholder="Message"></textarea>
-        <button class="btn btn-primary" type="submit">Send</button>
-      </form>
-    </div>
-  </section>
+<section id="contact">
+  <h2>Contact</h2>
+  <p class="lead">I’m always open to collaborations at the intersection of data, UX, and storytelling. Let’s connect.</p>
+  <div class="container" style="margin-top:2.2rem;max-width:600px">
+    <form action="mailto:aryaxazari@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name">
+      <input type="email" name="email" placeholder="Your Email">
+      <textarea name="message" placeholder="Message"></textarea>
+      <button class="btn btn-primary" type="submit">Send</button>
+    </form>
+  </div>
+</section>
+
 
   <footer>
     <p>© <span id="year"></span> Arya Azari. Enthusiasm Enthusiast.</p>
@@ -116,6 +117,7 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
