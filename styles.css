@@ -73,9 +73,25 @@ form input, form textarea {
   font-size:1.1rem;
 }
 form textarea { min-height:160px; }
+.custom-btn {
+  background-color: #111;   /* dark background to match site */
+  color: #fff;              /* white text */
+  border: 2px solid #fff;   /* thin white border */
+  padding: 0.75rem 1.5rem;  /* more spacious padding */
+  font-size: 1.1rem;        /* slightly larger font */
+  border-radius: 8px;       /* smooth rounded edges */
+  transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #fff;   /* invert on hover */
+  color: #111;
+  border: 2px solid #fff;
+}
 
 /* Footer */
 footer { padding:120px 0 60px; text-align:center; color:var(--muted); font-size:1rem; border-top:1px solid #333; }
+
 
 
 
