@@ -50,6 +50,16 @@ p.lead { text-align:center; max-width:780px; margin:0 auto; color:var(--muted); 
 .card .body { padding:1.6rem; }
 .card h3 { font-family:'Playfair Display',serif; margin-bottom:.6rem; font-size:1.5rem; letter-spacing:.03em; }
 .card p { color:var(--muted); font-size:1.05rem; }
+.project-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.project-card-link h3,
+.project-card-link p {
+  color: inherit;
+}
 
 /* Contact */
 form input, form textarea {
@@ -66,6 +76,7 @@ form textarea { min-height:160px; }
 
 /* Footer */
 footer { padding:120px 0 60px; text-align:center; color:var(--muted); font-size:1rem; border-top:1px solid #333; }
+
 
 
 
