@@ -1,4 +1,4 @@
-Welcome to my personal portfolio! This repository contains the code, documentation, and supporting files for the projects I’ve highlighted on my [portfolio website](https://aryaazari.github.io). 
+Welcome to my personal portfolio! This repository contains the code, documentation, and supporting files for the projects that are visible on my [portfolio website](https://aryaazari.github.io). 
 
 ---
 
@@ -42,7 +42,7 @@ Check out more projects on my [portfolio site](https://aryaazari.github.io), inc
 
 ---
 
-## 📬 Contact
-# Feel free to reach out!
+## Contact
+## Feel free to reach out!
 - Email: [arya.azari04@gmail.com](mailto:arya.azari04@gmail.com)  
 - LinkedIn: [linkedin.com/in/aryaazari](https://linkedin.com/in/aryaazari)  
