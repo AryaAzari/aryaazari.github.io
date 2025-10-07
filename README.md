@@ -42,7 +42,6 @@ Check out more projects on my [portfolio site](https://aryaazari.github.io), inc
 
 ---
 
-## Contact
 ## Feel free to reach out!
 - Email: [arya.azari04@gmail.com](mailto:arya.azari04@gmail.com)  
 - LinkedIn: [linkedin.com/in/aryaazari](https://linkedin.com/in/aryaazari)  
