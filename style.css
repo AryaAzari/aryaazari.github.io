@@ -1,8 +1,8 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5; /* GRAY COLOR */
+  font-family: American Typewriter, serif;
+  background-color: #b7def7; /* Blueish */
   color: #222222;
 }
 
@@ -15,7 +15,7 @@ body {
 /* Header starts here */
 
 .site-header {
-  background-color: #ffffff;
+  background-color: #a8ddff;
   border-bottom: 1px solid #dddddd;
 }
 
@@ -48,18 +48,18 @@ body {
 
 /* Intro section */
 
-.hero {
+.intro {
   background-color: #ffffff;
   border-bottom: 1px solid #dddddd;
   padding: 24px 0;
 }
 
-.hero h2 {
+.intro h2 {
   margin-top: 0;
   margin-bottom: 8px;
 }
 
-.hero-text {
+.intro-text {
   margin: 0;
   color: #555555;
 }
@@ -158,3 +158,4 @@ body {
     flex-wrap: wrap;
   }
 }
+
