@@ -1,200 +1,277 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Arya Azari</title>
-  <meta name="description" content="Arya Azari — Cognitive Science & Data Science student. Projects, skills, and contact." />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Scrappy Portfolio</title>
+  <style>
+    :root{
+      --bg: #87CEEB;      /* sky blue */
+      --ink: #0b1b4d;     /* navy-ish */
+      --card: rgba(255,255,255,0.45);
+      --border: rgba(11,27,77,0.25);
+    }
 
-  <!-- Optional: nicer sharing preview (fill in later) -->
-  <!-- <meta property="og:title" content="Arya Azari" />
-  <meta property="og:description" content="Cognitive Science & Data Science student. Projects, skills, and contact." />
-  <meta property="og:image" content="assets/preview.png" />
-  <meta property="og:url" content="https://yourdomain.com" />
-  <meta name="twitter:card" content="summary_large_image" /> -->
+    * { box-sizing: border-box; }
+    body{
+      margin: 0;
+      font-family: "Comic Sans MS","Comic Sans",cursive;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.4;
+    }
 
-  <link rel="stylesheet" href="style.css" />
+    /* scrappy header */
+    header{
+      padding: 28px 16px 12px;
+      text-align: center;
+    }
+    .name{
+      font-size: clamp(28px, 5vw, 46px);
+      margin: 0 0 6px;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 0 rgba(255,255,255,0.35);
+    }
+    .tagline{
+      margin: 0 auto 14px;
+      max-width: 680px;
+      font-size: 16px;
+    }
+
+    /* goofy nav chips */
+    nav{
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0 4px;
+    }
+    nav a{
+      color: var(--ink);
+      text-decoration: none;
+      padding: 8px 12px;
+      border: 2px dashed var(--ink);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.25);
+      transform: rotate(-0.5deg);
+    }
+    nav a:nth-child(2){ transform: rotate(0.8deg); }
+    nav a:nth-child(3){ transform: rotate(-1.1deg); }
+    nav a:nth-child(4){ transform: rotate(0.4deg); }
+    nav a:hover{
+      background: rgba(255,255,255,0.5);
+      box-shadow: 0 6px 0 rgba(11,27,77,0.12);
+      transform: translateY(-2px) rotate(0deg);
+    }
+
+    main{
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 12px 16px 40px;
+      display: grid;
+      gap: 14px;
+    }
+
+    section{
+      border: 3px solid var(--ink);
+      border-radius: 14px;
+      background: var(--card);
+      padding: 14px 14px 12px;
+      box-shadow: 8px 8px 0 rgba(11,27,77,0.18);
+    }
+
+    h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      text-decoration: underline wavy rgba(11,27,77,0.65);
+      text-underline-offset: 3px;
+    }
+
+    .grid{
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .card{
+      border: 2px dashed var(--ink);
+      border-radius: 12px;
+      padding: 10px 10px 8px;
+      background: rgba(255,255,255,0.35);
+    }
+
+    .card h3{
+      margin: 0 0 6px;
+      font-size: 18px;
+    }
+
+    .meta{
+      font-size: 13px;
+      opacity: 0.85;
+      margin: 0 0 8px;
+    }
+
+    .pillrow{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+    .pill{
+      border: 2px solid var(--border);
+      background: rgba(255,255,255,0.4);
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+    }
+
+    a{
+      color: var(--ink);
+      font-weight: bold;
+    }
+
+    footer{
+      text-align: center;
+      padding: 10px 16px 28px;
+      opacity: 0.85;
+    }
+
+    /* tiny “scrappy” accents */
+    .scribble{
+      display: inline-block;
+      border-bottom: 3px dotted rgba(11,27,77,0.65);
+      padding-bottom: 2px;
+    }
+  </style>
 </head>
 
 <body>
-  <!-- Skip link for accessibility -->
-  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <h1 class="name">YOUR NAME</h1>
+    <p class="tagline">
+      I build stuff, analyze stuff, and occasionally overthink stuff.
+      Welcome to my <span class="scribble">scrappy</span> portfolio.
+    </p>
 
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <a class="site-title" href="#top" aria-label="Go to top">Arya Azari</a>
-
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <main id="main">
-    <!-- Intro / Hero -->
-    <section class="intro">
-      <div class="container">
-        <p class="eyebrow">UC Berkeley • Cognitive Science + Data Science</p>
-        <h1>Hi, I'm Arya.</h1>
-        <p class="intro-text">
-          I’m interested in building practical data + automation systems that turn messy info into clear answers.
-        </p>
-
-        <div class="cta-row">
-          <a class="btn" href="#projects">View projects</a>
-          <a class="btn btn-secondary" href="assets/Arya_Azari_Resume.pdf" target="_blank" rel="noopener">
-            Download resume
-          </a>
-        </div>
-
-        <div class="quick-links" aria-label="Quick links">
-          <a href="https://github.com/AryaAzari" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://linkedin.com/in/arya-azari/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="mailto:arya.azari04@gmail.com">Email</a>
-        </div>
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        Hi — I’m <b>Your Name</b>. I’m into <i>data</i>, <i>products</i>, and <i>making things clear</i>.
+        Here’s a one-liner about what you’re aiming for:
+        <br />
+        <b>“I help teams turn messy information into decisions.”</b>
+      </p>
+      <div class="pillrow">
+        <span class="pill">SQL</span>
+        <span class="pill">Python</span>
+        <span class="pill">Tableau / Power BI</span>
+        <span class="pill">Analytics</span>
+        <span class="pill">Product-y thinking</span>
       </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2>About Me</h2>
-        <p>
-          I’m a fourth-year UC Berkeley student studying Cognitive Science and Data Science. I enjoy machine learning,
-          analytics, and building tools that automate repetitive work.
-        </p>
-
-        <div class="about-grid">
-          <div class="about-card">
-            <h3>What I’m into</h3>
-            <ul>
-              <li>Data pipelines & dashboards</li>
-              <li>Machine learning (classification/regression)</li>
-              <li>Automation (APIs, scripting, workflow tools)</li>
-            </ul>
-          </div>
-
-          <div class="about-card">
-            <h3>Right now</h3>
-            <ul>
-              <li>Building out this portfolio with real project writeups</li>
-              <li>Improving frontend polish + accessibility</li>
-              <li>Applying for internships</li>
-            </ul>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Project One</h3>
+          <p class="meta">What it is • 2026</p>
+          <p>
+            One sentence on the goal + impact. (Example: “Built a dashboard that tracked KPI movement weekly and cut reporting time by 60%.”)
+          </p>
+          <p>
+            <a href="#">Live</a> · <a href="#">Code</a> · <a href="#">Write-up</a>
+          </p>
+          <div class="pillrow">
+            <span class="pill">Power BI</span>
+            <span class="pill">DAX</span>
+            <span class="pill">SharePoint</span>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Projects -->
-    <section id="projects" class="section">
-      <div class="container">
-        <div class="section-header">
-          <h2>Projects</h2>
-          <p class="muted">A few things I’ve worked on (more detailed case studies coming soon).</p>
+        <div class="card">
+          <h3>Project Two</h3>
+          <p class="meta">What it is • 2025</p>
+          <p>
+            One sentence on the problem + your approach. Keep it human. Keep it short.
+          </p>
+          <p>
+            <a href="#">Slides</a> · <a href="#">Repo</a>
+          </p>
+          <div class="pillrow">
+            <span class="pill">Python</span>
+            <span class="pill">Pandas</span>
+            <span class="pill">Modeling</span>
+          </div>
         </div>
 
-        <div class="projects">
-          <article class="project">
-            <h3>NGordNet</h3>
-            <p>CS61B design project. Graph/WordNet-style relationships and efficient queries.</p>
-            <p class="project-tech">Java • Data Structures</p>
-            <div class="project-links">
-              <a href="#" aria-disabled="true">Writeup (soon)</a>
-              <a href="#" aria-disabled="true">Code (private)</a>
-            </div>
-          </article>
-
-          <article class="project">
-            <h3>Coin Collecting Game</h3>
-            <p>2D game project with a world loop, interactions, and basic rendering.</p>
-            <p class="project-tech">Java • Rendering</p>
-            <div class="project-links">
-              <a href="#" aria-disabled="true">Demo (soon)</a>
-              <a href="#" aria-disabled="true">Writeup (soon)</a>
-            </div>
-          </article>
-
-          <article class="project">
-            <h3>Data Project (placeholder)</h3>
-            <p>A small analytics project—cleaning data, exploring patterns, and presenting insights.</p>
-            <p class="project-tech">Python • Pandas • Visualization</p>
-            <div class="project-links">
-              <a href="#" aria-disabled="true">Notebook (soon)</a>
-              <a href="#" aria-disabled="true">Summary (soon)</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="section">
-      <div class="container">
-        <h2>Skills</h2>
-        <div class="skills">
-          <div class="skill-group">
-            <h3>Languages</h3>
-            <ul class="pill-list">
-              <li>Python</li>
-              <li>Java</li>
-              <li>SQL</li>
-              <li>JavaScript</li>
-            </ul>
-          </div>
-
-          <div class="skill-group">
-            <h3>Tools</h3>
-            <ul class="pill-list">
-              <li>Pandas</li>
-              <li>NumPy</li>
-              <li>Git</li>
-              <li>Tableau / Power BI</li>
-            </ul>
-          </div>
-
-          <div class="skill-group">
-            <h3>Topics</h3>
-            <ul class="pill-list">
-              <li>Machine Learning</li>
-              <li>Data Visualization</li>
-              <li>Automation</li>
-              <li>Experimentation</li>
-            </ul>
+        <div class="card">
+          <h3>Project Three</h3>
+          <p class="meta">What it is • 2024</p>
+          <p>
+            One sentence describing what you shipped and what changed because of it.
+          </p>
+          <p>
+            <a href="#">Demo</a> · <a href="#">Notes</a>
+          </p>
+          <div class="pillrow">
+            <span class="pill">SQL</span>
+            <span class="pill">A/B Testing</span>
+            <span class="pill">Storytelling</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section">
-      <div class="container">
-        <h2>Contact</h2>
-        <p>If you want to reach out, email is best.</p>
-
-        <ul class="contact-list">
-          <li>Email: <a href="mailto:arya.azari04@gmail.com">arya.azari04@gmail.com</a></li>
-          <li>LinkedIn: <a href="https://linkedin.com/in/arya-azari/" target="_blank" rel="noopener">linkedin.com/in/arya-azari</a></li>
-          <li>GitHub: <a href="https://github.com/AryaAzari" target="_blank" rel="noopener">github.com/AryaAzari</a></li>
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="card">
+        <h3>Role Title — Company</h3>
+        <p class="meta">City • Dates</p>
+        <ul>
+          <li>Did a thing. Made a measurable improvement. (Add numbers if you have them.)</li>
+          <li>Built/owned X. Partnered with Y. Shipped Z.</li>
+          <li>Bonus: one line showing scope (users, dollars, volume, cadence).</li>
         </ul>
-
-        <p class="back-to-top"><a href="#top">Back to top ↑</a></p>
       </div>
+
+      <div class="card" style="margin-top:10px;">
+        <h3>Another Role — Another Place</h3>
+        <p class="meta">City • Dates</p>
+        <ul>
+          <li>Short bullet. Concrete nouns. Minimal fluff.</li>
+          <li>Short bullet. Concrete nouns. Minimal fluff.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Email: <a href="mailto:you@email.com">you@email.com</a><br />
+        LinkedIn: <a href="#">linkedin.com/in/yourname</a><br />
+        GitHub: <a href="#">github.com/yourname</a>
+      </p>
+      <p style="margin-top:10px;">
+        <b>Resume:</b> <a href="#">Download PDF</a>
+      </p>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Arya Azari</p>
-    </div>
+  <footer>
+    <div>© <span id="year"></span> YOUR NAME — made with Comic Sans and confidence.</div>
   </footer>
 
-  <script src="script.js"></script>
   <script>
-    // tiny enhancement even if script.js is empty
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
