@@ -1,31 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Arya Azari</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Arya Azari — Cognitive Science & Data Science student. Projects, skills, and contact." />
+
+  <!-- Optional: nicer sharing preview (fill in later) -->
+  <!-- <meta property="og:title" content="Arya Azari" />
+  <meta property="og:description" content="Cognitive Science & Data Science student. Projects, skills, and contact." />
+  <meta property="og:image" content="assets/preview.png" />
+  <meta property="og:url" content="https://yourdomain.com" />
+  <meta name="twitter:card" content="summary_large_image" /> -->
+
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <header class="site-header">
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
     <div class="container header-inner">
-      <h1 class="site-title">Arya Azari</h1>
-      <!-- <nav class="site-nav">
+      <a class="site-title" href="#top" aria-label="Go to top">Arya Azari</a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
-      </nav> -->
+      </nav>
     </div>
   </header>
 
-  <main>
-    <!-- Intro Section -->
+  <main id="main">
+    <!-- Intro / Hero -->
     <section class="intro">
       <div class="container">
-        <h2>Hi, I'm Arya.</h2>
+        <p class="eyebrow">UC Berkeley • Cognitive Science + Data Science</p>
+        <h1>Hi, I'm Arya.</h1>
         <p class="intro-text">
-          Third-year UC Berkeley student studying Cognitive Science and Data Science. Passion for Linked-Trees.
+          I’m interested in building practical data + automation systems that turn messy info into clear answers.
         </p>
+
+        <div class="cta-row">
+          <a class="btn" href="#projects">View projects</a>
+          <a class="btn btn-secondary" href="assets/Arya_Azari_Resume.pdf" target="_blank" rel="noopener">
+            Download resume
+          </a>
+        </div>
+
+        <div class="quick-links" aria-label="Quick links">
+          <a href="https://github.com/AryaAzari" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/arya-azari/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:arya.azari04@gmail.com">Email</a>
+        </div>
       </div>
     </section>
 
@@ -34,33 +63,107 @@
       <div class="container">
         <h2>About Me</h2>
         <p>
-          I love Data and Machine Learning. Inshallah I get a job.
+          I’m a fourth-year UC Berkeley student studying Cognitive Science and Data Science. I enjoy machine learning,
+          analytics, and building tools that automate repetitive work.
         </p>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>What I’m into</h3>
+            <ul>
+              <li>Data pipelines & dashboards</li>
+              <li>Machine learning (classification/regression)</li>
+              <li>Automation (APIs, scripting, workflow tools)</li>
+            </ul>
+          </div>
+
+          <div class="about-card">
+            <h3>Right now</h3>
+            <ul>
+              <li>Building out this portfolio with real project writeups</li>
+              <li>Improving frontend polish + accessibility</li>
+              <li>Applying for internships</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Projects -->
     <section id="projects" class="section">
       <div class="container">
-        <h2>Projects</h2>
+        <div class="section-header">
+          <h2>Projects</h2>
+          <p class="muted">A few things I’ve worked on (more detailed case studies coming soon).</p>
+        </div>
 
         <div class="projects">
-          <div class="project">
+          <article class="project">
             <h3>NGordNet</h3>
-            <p>Will eventually dump my 61B design project here (not tryna get my code touched)</p>
-            <p class="project-tech">Java, Data Structures</p>
-          </div>
+            <p>CS61B design project. Graph/WordNet-style relationships and efficient queries.</p>
+            <p class="project-tech">Java • Data Structures</p>
+            <div class="project-links">
+              <a href="#" aria-disabled="true">Writeup (soon)</a>
+              <a href="#" aria-disabled="true">Code (private)</a>
+            </div>
+          </article>
 
-          <div class="project">
+          <article class="project">
             <h3>Coin Collecting Game</h3>
-            <p>Will eventually dump my other 61B project here (lowkey not done)</p>
-            <p class="project-tech">Java, some rendering library</p>
+            <p>2D game project with a world loop, interactions, and basic rendering.</p>
+            <p class="project-tech">Java • Rendering</p>
+            <div class="project-links">
+              <a href="#" aria-disabled="true">Demo (soon)</a>
+              <a href="#" aria-disabled="true">Writeup (soon)</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3>Data Project (placeholder)</h3>
+            <p>A small analytics project—cleaning data, exploring patterns, and presenting insights.</p>
+            <p class="project-tech">Python • Pandas • Visualization</p>
+            <div class="project-links">
+              <a href="#" aria-disabled="true">Notebook (soon)</a>
+              <a href="#" aria-disabled="true">Summary (soon)</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="skills">
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <ul class="pill-list">
+              <li>Python</li>
+              <li>Java</li>
+              <li>SQL</li>
+              <li>JavaScript</li>
+            </ul>
           </div>
 
-          <div class="project">
-            <h3>Some data project</h3>
-            <p>What is a computer scientist's favorite kind of coffee? JAVA!!!</p>
-            <p class="project-tech">I am touching Wali</p>
+          <div class="skill-group">
+            <h3>Tools</h3>
+            <ul class="pill-list">
+              <li>Pandas</li>
+              <li>NumPy</li>
+              <li>Git</li>
+              <li>Tableau / Power BI</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3>Topics</h3>
+            <ul class="pill-list">
+              <li>Machine Learning</li>
+              <li>Data Visualization</li>
+              <li>Automation</li>
+              <li>Experimentation</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -70,23 +173,29 @@
     <section id="contact" class="section">
       <div class="container">
         <h2>Contact</h2>
+        <p>If you want to reach out, email is best.</p>
+
         <ul class="contact-list">
           <li>Email: <a href="mailto:arya.azari04@gmail.com">arya.azari04@gmail.com</a></li>
-          <li>LinkedIn: <a href="https://linkedin.com/in/arya-azari/" target="_blank">linkedin.com/in/AryaAzari</a></li>
-          <li>GitHub: <a href="https://github.com/AryaAzari" target="_blank">github.com/AryaAzari</a></li>
+          <li>LinkedIn: <a href="https://linkedin.com/in/arya-azari/" target="_blank" rel="noopener">linkedin.com/in/arya-azari</a></li>
+          <li>GitHub: <a href="https://github.com/AryaAzari" target="_blank" rel="noopener">github.com/AryaAzari</a></li>
         </ul>
+
+        <p class="back-to-top"><a href="#top">Back to top ↑</a></p>
       </div>
     </section>
   </main>
 
-  <!-- <footer class="site-footer">
+  <footer class="site-footer">
     <div class="container">
-      <p id="footer-text">© 2025 Your Name</p>
+      <p>© <span id="year"></span> Arya Azari</p>
     </div>
-  </footer> -->
+  </footer>
 
   <script src="script.js"></script>
+  <script>
+    // tiny enhancement even if script.js is empty
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
-
