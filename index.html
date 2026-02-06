@@ -143,6 +143,44 @@ in<!doctype html>
       border-bottom: 3px dotted rgba(11,27,77,0.65);
       padding-bottom: 2px;
     }
+
+    .about-row{
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.headshot-frame{
+  flex: 0 0 220px;
+  border: 3px solid #0b1b3a;
+  border-radius: 18px;
+  padding: 10px;
+  background: rgba(255,255,255,0.18);
+}
+
+.headshot{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+
+#about{
+  flex: 1;
+  margin: 0;
+}
+
+
+@media (max-width: 800px){
+  .about-row{
+    flex-direction: column;
+  }
+  .headshot-frame{
+    width: min(260px, 100%);
+  }
+}
   </style>
 </head>
 
@@ -163,12 +201,19 @@ in<!doctype html>
   </header>
 
   <main>
+  <section class="about-row">
+    <div class="headshot-frame">
+      <img src="images/me.jpg" alt="Photo of Arya" class="headshot" />
+    </div>
+
     <section id="about">
       <h2>About</h2>
       <p>
-        I’m <b>Arya</b>, a fourth-year Cognitive Science and Data Science student at UC Berkeley. I’m into <i>data</i>, <i>machine learning</i>, and <i>computational cognition</i>.
+        I’m <b>Arya</b>, a fourth-year Cognitive Science and Data Science student at UC Berkeley.
+        I’m into <i>data</i>, <i>machine learning</i>, and <i>computational cognition</i>.
         <br />
       </p>
+
       <div class="pillrow">
         <span class="pill">Python</span>
         <span class="pill">SQL</span>
@@ -177,6 +222,7 @@ in<!doctype html>
         <span class="pill">Visualizations</span>
       </div>
     </section>
+  </section>
 
     <section id="coolproj">
       <h2>Cool Projects</h2>
@@ -275,6 +321,7 @@ in<!doctype html>
   </script>
 </body>
 </html>
+
 
 
 
